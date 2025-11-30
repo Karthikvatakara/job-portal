@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from './components/ui/button'
 import { createBrowserRouter } from 'react-router-dom'
 import AppLayout from './layouts/AppLayout'
 import LandingPage from './pages/LandingPage'
@@ -10,6 +9,8 @@ import JobPage from './pages/JobPage';
 import PostJob from './pages/PostJob';
 import SavedJobs from './pages/SavedJobs';
 import MyJobs from './pages/MyJobs';
+import { ThemeProvider } from './components/ui/ThemeProvider'
+import "./app.css"
 
 function App() {
 
@@ -49,7 +50,10 @@ const router   = createBrowserRouter([
   }
 ])
   return (
-    <RouterProvider router={router}/>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme" >
+     
+      <RouterProvider router={router}/>
+  </ThemeProvider>
   )
 }
 
