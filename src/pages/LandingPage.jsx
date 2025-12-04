@@ -37,7 +37,7 @@ function LandingPage() {
         </div>
 
             <div>
-        <Carousel plugins={[Autoplay({delay:2000})]} className="w-full">
+        <Carousel plugins={[Autoplay({delay:2000})]} className="w-full z-[-1]">
       <CarouselContent>
        {companies.map((item) => (
             <CarouselItem key={item.id} className="basis-1/2 sm:basis-1/3 lg:basis-1/4 flex items-center justify-center">
